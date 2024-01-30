@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    tools:context=".RegisterActivity">
+
+<!--  menamplikan gambar  -->
+    <ImageView
+        android:id="@+id/image_register"
+        android:layout_width="131dp"
+        android:layout_height="127dp"
+        android:src="@drawable/splash_screen"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_marginBottom="-30dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/text_login_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Daftar"
+                android:textColor="@color/black"
+                android:layout_marginTop="18dp"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="Selamat datang dipengaduan mahasiswa"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+<!--     membuat text input nim      -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="NIM Anda"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/bg_primary"
+                app:hintTextColor="@color/bg_primary"
+                app:endIconDrawable="@color/bg_primary"
+                android:id="@+id/input_nim_register"
+                app:helperTextTextColor="@color/bg_secondary"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_nim_register"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/baseline_assignment_ind_24"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+<!--     end membuat text input nim       -->
+
+<!--     membuat text input nama       -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nama Anda"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/bg_primary"
+                app:hintTextColor="@color/bg_primary"
+                app:endIconDrawable="@color/bg_primary"
+                android:id="@+id/input_nama"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_nama_register"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/baseline_person_24"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+<!--    end membuat text input nama        -->
+
+<!--    membuat text input email        -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Email Anda"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/bg_primary"
+                app:hintTextColor="@color/bg_primary"
+                app:endIconDrawable="@color/bg_primary"
+                android:id="@+id/input_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_email_register"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/baseline_email_24"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+<!--    end membuat text input email        -->
+
+<!--    embuat text input password        -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Password Anda"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/bg_primary"
+                app:hintTextColor="@color/bg_primary"
+                app:endIconDrawable="@color/bg_primary"
+                android:id="@+id/input_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_password_register"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/baseline_lock_24"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+<!--    end membuat text input password        -->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/button_register"
+                android:text="DAFTAR"
+                android:fontFamily="sans-serif-light"
+                android:textFontWeight="700"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:letterSpacing="0.3"
+                android:backgroundTint="@color/bg_primary"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sudah punya akun ?"
+                android:id="@+id/text_1"
+                android:fontFamily="sans-serif-light"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_text_masuk"
+                android:layout_marginTop="8dp"
+                android:text="Masuk"
+                android:fontFamily="sans-serif-light"
+                android:textFontWeight="700"
+                android:textSize="20sp"
+                android:textColor="@color/bg_secondary"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/register_card_pregress_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/black">
+        <ProgressBar
+            android:layout_width="95dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center"
+            android:progress="70"
+            android:max="100"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

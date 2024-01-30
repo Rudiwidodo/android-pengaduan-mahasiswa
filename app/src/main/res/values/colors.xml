@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bg_primary">#3B5CAB</color>
+    <color name="bg_secondary">#FB2E76</color>
+    <color name="grey">#b5b5b5</color>
+    <color name="bg_card_adapter">#F3F3F3</color>
+    <color name="bg_action_button_edit">#F47E11</color>
+    <color name="bg_action_button_delete">#FB2E76</color>
+    <color name="bg_action_button_detail">#10EF0C</color>
+</resources>
