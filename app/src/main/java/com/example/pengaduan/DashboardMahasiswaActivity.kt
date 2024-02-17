@@ -50,8 +50,6 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard_mahasiswa)
 
-        sharedPref = PrefrencesHelper(this)
-
         setUpView()
         setUpListener()
     }
@@ -104,6 +102,7 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
 //    lifecycle pada android
     override fun onStart() {
         super.onStart()
+        sharedPref = PrefrencesHelper(this)
         sessionToken = sharedPref.getString(Constant.PREF_IS_TOKEN).toString()
         setUpAdapter()
         getProfileMahasiswa()
@@ -120,7 +119,9 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
 
 //    get profile mahasiswa
     private fun getProfileMahasiswa(){
+
     cardProgressBar.visibility = View.VISIBLE
+
     val retro = Retro().getClientInstance().create(GetProfileMahaisswaApi::class.java)
     retro.getProfileMahasiswa(
         token = sessionToken
@@ -153,6 +154,7 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
         }
 
         override fun onFailure(call: Call<GetProfileMahasiswaResponse>, t: Throwable) {
+            cardProgressBar.visibility = View.INVISIBLE
             Toast.makeText(this@DashboardMahasiswaActivity, t.message.toString(), Toast.LENGTH_SHORT).show()
         }
     })
@@ -186,7 +188,7 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
         retro.getPengaduanDiterima(
             token = sessionToken
         ).enqueue(object: Callback<PengaduanResponse> {
-            override fun onResponse(
+            override fun onResponse( // success
                 call: Call<PengaduanResponse>,
                 response: Response<PengaduanResponse>
             ) {
@@ -196,7 +198,7 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<PengaduanResponse>, t: Throwable) {
+            override fun onFailure(call: Call<PengaduanResponse>, t: Throwable) { // error
                 Toast.makeText(this@DashboardMahasiswaActivity, t.message.toString(), Toast.LENGTH_SHORT).show()
             }
         })
@@ -228,12 +230,14 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
     private fun setUpListener(){
 //      button logout action
         btnLogout.setOnClickListener(){
+
             cardProgressBar.visibility = View.VISIBLE
 
             val retro = Retro().getClientInstance().create(LogoutApi::class.java)
             retro.logout(
                 token = sessionToken
             ).enqueue(object: Callback<LogoutResponse> {
+
                 override fun onResponse(
                     call: Call<LogoutResponse>,
                     response: Response<LogoutResponse>
@@ -245,7 +249,7 @@ class DashboardMahasiswaActivity : AppCompatActivity() {
                         sharedPref.put(Constant.PREF_IS_TOKEN, "")
 
                         val res = response.body()
-                        Toast.makeText(this@DashboardMahasiswaActivity, res?.message.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@DashboardMahasiswaActivity, "iso manual", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@DashboardMahasiswaActivity, LoginActivity::class.java))
                     }
                 }

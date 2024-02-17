@@ -40,13 +40,13 @@ class FragmentMenungguAdapter(
             updatedAt = pengaduan[position].updatedAt
         )
 
-        holder.fabEdit.setOnClickListener {
-            listener.onUpdatePengaduan(result)
-        }
-
-        holder.fabDelete.setOnClickListener {
-            listener.onDeletePengaduan(pengaduan[position].id!!.toInt())
-        }
+//        holder.fabEdit.setOnClickListener {
+//            listener.onUpdatePengaduan(result)
+//        }
+//
+//        holder.fabDelete.setOnClickListener {
+//            listener.onDeletePengaduan(pengaduan[position].id!!.toInt())
+//        }
 
         holder.fabDetail.setOnClickListener {
             listener.onDetailPengaduan(result)
@@ -61,14 +61,14 @@ class FragmentMenungguAdapter(
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val imagePengaduan = view.findViewById<ImageView>(R.id.image_preview_adapter_menunggu)
         val isiPengaduan = view.findViewById<TextView>(R.id.text_adapter_menunggu)
-        val fabEdit = view.findViewById<FloatingActionButton>(R.id.fab_adapter_edit)
-        val fabDelete = view.findViewById<FloatingActionButton>(R.id.fab_adapter_delete)
+//        val fabEdit = view.findViewById<FloatingActionButton>(R.id.fab_adapter_edit)
+//        val fabDelete = view.findViewById<FloatingActionButton>(R.id.fab_adapter_delete)
         val fabDetail = view.findViewById<FloatingActionButton>(R.id.fab_adapter_detail)
     }
 
     interface OnAdapterListener {
-        fun onUpdatePengaduan(pengaduan: PengaduanResult)
-        fun onDeletePengaduan(id: Int)
+//        fun onUpdatePengaduan(pengaduan: PengaduanResult)
+//        fun onDeletePengaduan(id: Int)
 
         fun onDetailPengaduan(pengaduan: PengaduanResult)
     }

@@ -48,28 +48,28 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1">
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        app:fabCustomSize="32dp"
-                        android:id="@+id/fab_adapter_edit"
-                        android:backgroundTint="@color/bg_action_button_edit"
-                        android:src="@drawable/baseline_edit_24"
-                        android:foregroundGravity="center"
-                        android:layout_marginRight="5dp"
-                        android:layout_gravity="end|bottom"
-                        android:contentDescription="edit pengaduan"
-                        />
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        app:fabCustomSize="32dp"
-                        android:id="@+id/fab_adapter_delete"
-                        android:backgroundTint="@color/bg_action_button_delete"
-                        android:src="@drawable/baseline_delete_24"
-                        android:layout_marginRight="5dp"
-                        android:layout_gravity="end|bottom"
-                        android:contentDescription="delete pengaduan"/>
+<!--                    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="32dp"-->
+<!--                        app:fabCustomSize="32dp"-->
+<!--                        android:id="@+id/fab_adapter_edit"-->
+<!--                        android:backgroundTint="@color/bg_action_button_edit"-->
+<!--                        android:src="@drawable/baseline_edit_24"-->
+<!--                        android:foregroundGravity="center"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:layout_gravity="end|bottom"-->
+<!--                        android:contentDescription="edit pengaduan"-->
+<!--                        />-->
+<!--                    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="32dp"-->
+<!--                        app:fabCustomSize="32dp"-->
+<!--                        android:id="@+id/fab_adapter_delete"-->
+<!--                        android:backgroundTint="@color/bg_action_button_delete"-->
+<!--                        android:src="@drawable/baseline_delete_24"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:layout_gravity="end|bottom"-->
+<!--                        android:contentDescription="delete pengaduan"/>-->
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:layout_width="32dp"
                         android:layout_height="32dp"

@@ -80,7 +80,9 @@
         app:layout_constraintTop_toBottomOf="@id/profile_layout"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/card_tab_bar">
+        app:layout_constraintBottom_toTopOf="@id/card_tab_bar"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -204,10 +206,12 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_tab_bar"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="0dp"
         app:cardCornerRadius="24dp"
         android:layout_marginBottom="-20dp"
+        android:layout_marginTop="10dp"
         app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/card_pengaduan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -256,8 +260,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/view_pager"
-                android:padding="10dp"
-                android:layout_marginBottom="15dp"/>
+                android:paddingTop="10dp"
+                android:paddingHorizontal="10dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

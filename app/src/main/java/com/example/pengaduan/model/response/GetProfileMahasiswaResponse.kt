@@ -15,7 +15,7 @@ class GetProfileMahasiswaResponse {
         @SerializedName("no_identitas")
         @Expose
         var nim: String? = null
-        @SerializedName("nama_lengkap")
+        @SerializedName("nama_lengkap") // null
         @Expose
         var nama: String? = null
         @SerializedName("email")
